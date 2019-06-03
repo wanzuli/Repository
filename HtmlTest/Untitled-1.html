@@ -1,0 +1,68 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>document</title>
+    <style type="text/css">
+     input{
+         border: 10px solid #f99
+
+     }
+    </style>
+    <style type="text/css">
+        *{   
+            margin: 0;
+            padding: 0;
+        
+        }
+       ul{   
+          list-style: none;
+         }
+        
+         li{
+             margin: 0 10px;
+             float: left;
+             color: #F40;
+             font-weight: bold;
+             font-size: 14px;
+             height: 25px ;
+             line-height: 25px;
+             padding: 0 5px;
+
+         } 
+            li:hover{
+                border-radius: 15px;
+                background-color: #F40;
+                color: azure;
+            }
+    </style>
+</head>
+<body>
+   <ul type="circle">
+       <li>香蕉</li>
+       <li>苹果</li>
+       <li>橘子</li>
+       <li>菠萝</li>
+       <li>哈密瓜</li>
+   </ul>
+    <form action="">
+       <p>
+            username<input type="text">
+       </p> 
+       <p>
+            password<input type="password">
+       </p> 
+       <P>
+        username:<input type="texe" name="username" style="color: #F99999;" value="请输入用户名"
+        onfocus=" if(this.value=='请输入用户名'){this.value='';this.style.color='#F685' }" onblur="if(this.value==''){this.value='请输入用户名'}">
+
+       </P>
+  
+       你喜欢的球星
+      1 勒布朗 詹姆斯 <input type="radio" name="STAR" value="勒布朗">
+      1 科比 布莱恩特 <input type="radio" name="star" value="科比">
+      1 德克 诺维斯基 <input type="radio" name="star" value="德克">
+      <input type="submit">
+
+    </form>
+</body>
+</html>
