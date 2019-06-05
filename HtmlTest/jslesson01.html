@@ -1,28 +1,133 @@
 <HTML>
-    <meta charset="utf-8">
-    <title>
-        docment
-    </title>
-    <body>
-        <script type="text/javascript">
+<meta charset="utf-8">
+<title>
+    docment
+</title>
+
+<body>
+    <script type="text/javascript">
         // 1 / 0 Infinity Number
         //  NaN Not a Number
-         var a = (10 * 3 - 4 / 2 + 1) % 2
-             b = 3
-             b %= a + 3
-        document.write(a++);
-        document.write("<br>");
-        document.write(--b);
-        </script>
-        <script type="text/javascript">
-        // 比较运算符 
+        //  var a = (10 * 3 - 4 / 2 + 1) % 2
+        //      b = 3
+        //      b %= a + 3
+        // document.write(a++);
+        // document.write("<br>");
+        // document.write(--b);
+         // 比较运算符 
         // 逻辑运算符 && || ! 
         // && 先看第一表达式转换成布尔值的结果，如果结果为真，那么它会看第二个表达式转换为布尔值的结果，然后如果只有两个表达式的话，只看到第二个表达式，就可以返回该表达式的值了
         // undefined  null  NaN  ""  0 false  ==>false;  
-         var a = true
-          a  != a;
-          document.write("<br>");
-          document.write(a);
+        //  var a = true
+        //   a  != a;
+        //   document.write("<br>");
+        //   document.write(a);
+        // var score = parseInt(window.prompt('input'));
+        // //    90 - 100 alibaba
+        // //    80 - 90  tencent toutiao meituan  滴滴
+        // //    70 - 80  baidu  eleme  xiecheng 58赶集 
+        // //    60以下   不及格
+        // if(score > 90 && score <= 100) {
+        //     document.write('alibaba');
+        // }else if(score > 80 && score <= 90) {
+        //     document.write('temcent');
+        // }else if(score > 70 && score <= 80) {
+        //     document.write('baidu');
+        // }else if(score > 60 && score <= 70) {
+        //     document.write('mogujie');
+        // }else if(score < 60) {
+        //     document.write('oh my god!!! you gotta be kidding me!!!');
+        // }else{
+        //     document.write('error');
+        // }
+        //  && ||   常用于条件判断
+    </script>
+    <script type="text/javascript">
+        //  (1)         (2)    (3)
+        for (var i = 0; i < 10; i++) {
+            document.write('a' + " ");
+        } document.write("<br>");
+
+        //   先执行一遍（1）
+        //   判断（2）执行语句
+        //   判断（3）
+        //   判断（2）执行语句
+        //   判断（3）
+        //   判断（2）执行语句
+        //   判断（3）
+        //  1.var i = 0 ;
+        //  2.if(i < 10) {
+        //      document.write('a')
+        //  }
+        //  3.i++; --> i = 1;
+        //  4.if(i < 10) {
+        //      document.write('a');
+        //  } 
+        //  5.i++;
+        //  if(i < 10) {
+        //      document.write('a');
+        //  }
+        //  6.i++
+
+        var i = 1;
+        var count = 0;
+        for (; i;) {
+            document.write('a' + " ");
+
+            count++;
+            if (count == 10) {
+                i = 0;
+            }
+        } document.write("<br>");
+        // for 循环
+
+        var i = 1;
+        for (var i = 0; i < 100; i++) {
+            if (i % 3 == 0 || i % 5 == 0 || i % 7 == 0) {
+                document.write(i + " ");
+
+            }
+        } document.write("<br>");
+
+        var i = 100;
+        for (; i--;) {
+            document.write(i + " ");
+        } document.write("<br>");
+
+        var age = prompt('您好，请输入你的年级', "");
+        switch (age) {
+            case "1":
+                alert("你上一年级!");
+                break;
+            case "2":
+                alert("你上二年级!");
+                break;
+            case "3":
+                alert("你上三年级!");
+                break;
+            default:
+                alert("不知道你上几年级!");
+        } document.write("<br>");
+
+        var i = 0;
+        while (i < 100) {
+            if (i % 7 == 0 || i % 10 == 7) {
+                document.write(i + " ");
+            }
+            i++;
+        } document.write("<br>");
+        // do {
+        //         document.write('i');
+        //         i ++;
+        // } while(i < 10)
+        //         document.write("<br>");
+
+            // var score = parseInt(window.prompt('input'));
+            // var n = n * (n + 1)
+            // for (; n;) { 
+            //     document.write('n');
+            // } 
         </script>
-    </body>
+</body>
+
 </HTML>
