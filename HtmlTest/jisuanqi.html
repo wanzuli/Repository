@@ -7,35 +7,64 @@
         计算器
     </title>
     <link rel="stylesheet" href="css/jisuanqi.css">
+
+    <script type="text/javascript"> 
+        var result = "";
+        function jisuan(num) {
+            if (num == "=") {
+                document.form1.text.value = eval(result);
+            } else {
+                result = result + num;
+                document.form1.text.value = result;
+            }
+        }
+    </script>
 </head>
 
 <body>
     <div class="div1">
+
         <div class="div5">
-            <input type="text" name="" class="input1" style="width: 300px;height: 40px;">
-            <input type="button" value="AC" name="" class="input2" style="width: 50px; height: 50px;">
+            <input type="text" name="text" class="input1" style="width: 300px;height: 40px;">
+            <input type="button" value="AC" name="" onclick="jisuan(this.id)" class="input2"
+                style="width: 50px; height: 50px;">
         </div>
         <div class="div2">
-            <input type="button" value="1" name="" class="input2" style="height: 50px; width:50px;">
-            <input type="button" value="2" name="" class="input2" style="height: 50px; width:50px;">
-            <input type="button" value="3" name="" class="input2" style="height: 50px; width:50px;">
-            <input type="button" value="+" name="" class="input2" style="height: 50px; width:50px;">
-            <input type="button" value="*" name="" class="input2" style="height: 50px; width:50px;">
+            <input type="button" onclick="jisuan(this.id)" value="1" name="" class="input2"
+                style="height: 50px; width:50px; ">
+            <input type="button" onclick="jisuan(this.id)" value="2" name="" class="input2"
+                style="height: 50px; width:50px;">
+            <input type="button" onclick="jisuan(this.id)" value="3" name="" class="input2"
+                style="height: 50px; width:50px;">
+            <input type="button" onclick="jisuan(this.id)" value="+" name="" class="input2"
+                style="height: 50px; width:50px;">
+            <input type="button" onclick="jisuan(this.id)" value="*" name="" class="input2"
+                style="height: 50px; width:50px;">
 
         </div>
         <div class="div3">
-            <input type="button" value="4" name="" class="input2" style="height: 50px; width:50px;">
-            <input type="button" value="5" name="" class="input2" style="height: 50px; width:50px;">
-            <input type="button" value="6" name="" class="input2" style="height: 50px; width:50px;">
-            <input type="button" value="-" name="" class="input2" style="height: 50px; width:50px;">
-            <input type="button" value="%" name="" class="input2" style="height: 50px; width:50px;">
+            <input type="button" onclick="jisuan(this.id)" value="4" name="" class="input2"
+                style="height: 50px; width:50px;">
+            <input type="button" onclick="jisuan(this.id)" value="5" name="" class="input2"
+                style="height: 50px; width:50px;">
+            <input type="button" onclick="jisuan(this.id)" value="6" name="" class="input2"
+                style="height: 50px; width:50px;">
+            <input type="button" onclick="jisuan(this.id)" value="-" name="" class="input2"
+                style="height: 50px; width:50px;">
+            <input type="button" onclick="jisuan(this.id)" value="%" name="" class="input2"
+                style="height: 50px; width:50px;">
         </div>
         <div class="div4">
-            <input type="button" value="7" name="" class="input2" style="height: 50px; width:50px;">
-            <input type="button" value="8" name="" class="input2" style="height: 50px; width:50px;">
-            <input type="button" value="9" name="" class="input2" style="height: 50px; width:50px;">
-            <input type="button" value="0" name="" class="input2" style="height: 50px; width:50px;">
-            <input type="button" value="=" name="" class="input2" style="height: 50px; width:50px;">
+            <input type="button" onclick="jisuan(this.id)" value="7" name="" class="input2"
+                style="height: 50px; width:50px;">
+            <input type="button" onclick="jisuan(this.id)" value="8" name="" class="input2"
+                style="height: 50px; width:50px;">
+            <input type="button" onclick="jisuan(this.id)" value="9" name="" class="input2"
+                style="height: 50px; width:50px;">
+            <input type="button" onclick="jisuan(this.id)" value="0" name="" class="input2"
+                style="height: 50px; width:50px;">
+            <input type="button" onclick="jisuan(this.id)" value="=" name="" class="input2"
+                style="height: 50px; width:50px;">
         </div>
     </div>
 
