@@ -6,16 +6,119 @@
     <title>
 
     </title>
-    <script type="text/javascript" src="test.js">
+    <!-- <script type="text/javascript" src="test.js">
     </script>
     <script>
-        // var str = "javascript 编程语言";
-        // document.write("<h2>" + str + "</h2>");
-        // document.write("<p>实际长度=" + strlen(str) + "字节</p>");
-    </script>
+        var str = "javascript 编程语言";
+        document.write("<h2>" + str + "</h2>");
+        document.write("<p>实际长度=" + strlen(str) + "字节</p>");
+    </script> -->
 </head>
 
 <body>
 </body>
+<script type="text/javascript">
+    //  var arr = [1,2,3,4,5]
+    //  console.log(isNaN(null));
+    // 高内聚 弱偶合
+    // 1. 命名函数表达式。
+    // var test = function abc() {
+    //     docunmen.write('a');
+    // }
+    // 2.匿名函数表达式。--函数表达式
+    // var demo = function () {
+
+    //     docunment.write('b');
+    // }
+    // 形式参数 --形参
+    // function test(a , b) {
+    //     var c = a + b;  
+    //     document.write(c);
+    // }
+    // 实际参数 -- 实参 
+    // test(1 , 2);
+    // test(3 , 4);
+    // function sum(a) {
+    //     // arguments.log(arguments);
+    //     for(var i = 0; i < arguments.length; i++){
+    //         console.log(arguments[i]);
+    //     }
+
+    // }
+    // sum(11, 2, 3)
+    // function sum(a, b, c, d){
+    //     if(sum.length > arguments.length) {
+    //         console.log('形参多了')
+    //     }else if(sum.length < arguments.length) {
+    //         console.log('实参多了')
+    //     }else{
+    //         console.log('相等');
+    //     }
+    // }
+    // sum(11, undefined, 3, 4)
+    // function sum() {
+    //     var result = 0;
+    //     for(var i = 0; i < arguments.length; i++) {
+    //         result += arguments[i];
+    //     }
+    //     console.log(result);
+    // }
+    // sum(1,2,3,4,5,6,7,8,9,10);
+    // function sum(a, b){
+    //     arguments[1,2]
+    //     var a = 1;
+    //     a = 2;
+    //     arguments[0] = 3;
+    //     console.log(a);   
+    //  }
+    //  sum(1,2);
+    // function sum() {
+    //     return 123;
+    //    // return 终止函数 返回值
+    // }
+    // var num = sum();
+    // function myNumber(target) {
+    //     return + target;
+    // }
+    // var num = myNumber('123');
+    // console.log(typeof(num) + "" + num);
+    // function scream(animal) {
+    //     switch (animal) {
+    //         case "dog":
+    //             document.write('wang!');
+    //             return;
+    //         case "cat":
+    //             document.write('miao!');
+    //             return;
+    //         case "fish":
+    //             document.write('O~O~O~O');
+    //             return;
+    //     }
+    // }
+    // function reverse() {
+    //     var num = window.prompt('input');
+    //     var str = "";
+    //     for (var i = num.length - 1; i >= 0; i--) {
+    //         str += transfer(num[i]);
+    //     }
+    //     document.write(str);
+    // }
+    // function transfer(target) {
+    //     switch(target) {
+    //         case "1":
+    //             return "壹";
+    //         case "2":
+    //             return "俩";
+    //         case "3":
+    //             return "弎";
+    //     }
+    // }
+    function jc(n) {
+        if(n == 1) {
+            return 1;
+        }
+        return n * jc(n - 1);
+    }
+</script>
 
 </html>
