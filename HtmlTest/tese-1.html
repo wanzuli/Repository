@@ -18,107 +18,281 @@
 <body>
 </body>
 <script type="text/javascript">
-    //  var arr = [1,2,3,4,5]
-    //  console.log(isNaN(null));
-    // 高内聚 弱偶合
-    // 1. 命名函数表达式。
-    // var test = function abc() {
-    //     docunmen.write('a');
-    // }
-    // 2.匿名函数表达式。--函数表达式
-    // var demo = function () {
+    //  var arr = [1, 2, 3, 4, 5]
+    //     console.log(isNaN(null));
+    //     高内聚 弱偶合
+    //     1. 命名函数表达式。
+    //     var test = function abc() {
+    //         docunmen.write('a');
+    //     }
+    //     2.匿名函数表达式。--函数表达式
+    //     var demo = function () {
 
-    //     docunment.write('b');
-    // }
-    // 形式参数 --形参
-    // function test(a , b) {
-    //     var c = a + b;  
-    //     document.write(c);
-    // }
-    // 实际参数 -- 实参 
-    // test(1 , 2);
-    // test(3 , 4);
-    // function sum(a) {
-    //     // arguments.log(arguments);
-    //     for(var i = 0; i < arguments.length; i++){
-    //         console.log(arguments[i]);
+    //         docunment.write('b');
+    //     }
+    //     形式参数--形参
+    //     function test(a, b) {
+    //         var c = a + b;
+    //         document.write(c);
+    //     }
+    //     实际参数-- 实参
+    //     test(1, 2);
+    //     test(3, 4);
+    //     function sum(a) {
+    //         // arguments.log(arguments);
+    //         for (var i = 0; i < arguments.length; i++) {
+    //             console.log(arguments[i]);
+    //         }
+
+    //     }
+    //     sum(11, 2, 3)
+    //     function sum(a, b, c, d) {
+    //         if (sum.length > arguments.length) {
+    //             console.log('形参多了')
+    //         } else if (sum.length < arguments.length) {
+    //             console.log('实参多了')
+    //         } else {
+    //             console.log('相等');
+    //         }
+    //     }
+    //     sum(11, undefined, 3, 4)
+    //     function sum() {
+    //         var result = 0;
+    //         for (var i = 0; i < arguments.length; i++) {
+    //             result += arguments[i];
+    //         }
+    //         console.log(result);
+    //     }
+    //     sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    //     function sum(a, b) {
+    //         arguments[1, 2]
+    //         var a = 1;
+    //         a = 2;
+    //         arguments[0] = 3;
+    //         console.log(a);
+    //     }
+    //     sum(1, 2);
+    //     function sum() {
+    //         return 123;
+    //         // return 终止函数 返回一个值
     //     }
 
-    // }
-    // sum(11, 2, 3)
-    // function sum(a, b, c, d){
-    //     if(sum.length > arguments.length) {
-    //         console.log('形参多了')
-    //     }else if(sum.length < arguments.length) {
-    //         console.log('实参多了')
-    //     }else{
-    //         console.log('相等');
+
+    //     var num = sum();
+    //     function myNumber(target) {
+    //         return + target;
     //     }
-    // }
-    // sum(11, undefined, 3, 4)
-    // function sum() {
-    //     var result = 0;
-    //     for(var i = 0; i < arguments.length; i++) {
-    //         result += arguments[i];
+    //     var num = myNumber('123');
+    //     console.log(typeof (num) + "" + num);
+    //     function scream(animal) {
+    //         switch (animal) {
+    //             case "dog":
+    //                 document.write('wang!');
+    //                 return;
+    //             case "cat":
+    //                 document.write('miao!');
+    //                 return;
+    //             case "fish":
+    //                 document.write('O~O~O~O');
+    //                 return;
+    //         }
     //     }
-    //     console.log(result);
-    // }
-    // sum(1,2,3,4,5,6,7,8,9,10);
-    // function sum(a, b){
-    //     arguments[1,2]
-    //     var a = 1;
-    //     a = 2;
-    //     arguments[0] = 3;
-    //     console.log(a);   
-    //  }
-    //  sum(1,2);
-    // function sum() {
-    //     return 123;
-    //    // return 终止函数 返回值
-    // }
-    // var num = sum();
-    // function myNumber(target) {
-    //     return + target;
-    // }
-    // var num = myNumber('123');
-    // console.log(typeof(num) + "" + num);
-    // function scream(animal) {
-    //     switch (animal) {
-    //         case "dog":
-    //             document.write('wang!');
-    //             return;
-    //         case "cat":
-    //             document.write('miao!');
-    //             return;
-    //         case "fish":
-    //             document.write('O~O~O~O');
-    //             return;
+
+
+    //     function reverse() {
+    //         var num = window.prompt('input');
+    //         var str = "";
+    //         for (var i = num.length - 1; i >= 0; i--) {
+    //             str += transfer(num[i]);
+    //         }
+    //         document.write(str);
     //     }
-    // }
-    // function reverse() {
-    //     var num = window.prompt('input');
-    //     var str = "";
-    //     for (var i = num.length - 1; i >= 0; i--) {
-    //         str += transfer(num[i]);
+    //     function transfer(target) {
+    //         switch (target) {
+    //             case "1":
+    //                 return "壹";
+    //             case "2":
+    //                 return "俩";
+    //             case "3":
+    //                 return "弎";
+    //         }
     //     }
-    //     document.write(str);
-    // }
-    // function transfer(target) {
-    //     switch(target) {
-    //         case "1":
-    //             return "壹";
-    //         case "2":
-    //             return "俩";
-    //         case "3":
-    //             return "弎";
+
+
+    //     function jc(n) {
+    //         if (n == 1) {
+    //             return 1;
+    //         }
+    //         return n * jc(n - 1);
     //     }
+
+
+    //     递归   有两点作用  1. 找规律     2.找出口
+    //     var n = parseInt(window.prompt('input'));
+    //     function mul(n) {
+    //         if (n == 1 || n == 0) {
+    //             return 1;
+    //         }
+    //         return n * mul(n - 1);
+    //     }
+
+    //     预编译
+    //     test();
+    //     function test() {
+    //         console.log('a');
+    //     }
+    //     console.log('a');
+    //     var a = 123; 变量声明 在加变量赋值
+    //     函数声明整体提升  如果你写了一个函数 不管你写在哪里 系统都会吧函数声明提升到逻辑最前面
+    //     变量  声明提升   变量
+    //     预编译前奏   暗示全局变量；即任何变量，如果变量未经声明就赋值。
+    //     此变量就为全局对象所有。 语法 imply global(暗示全局变量)
+    //     eg: a = 123; eg: var a = b = 123;
+    //     2.一切声明的全局变量，全是window的属性。
+    //     eg: var a = 123; ===> window.a = 123;
+    //     window 就是全局的域
+    //     function test() {
+    //         var a = b = 123;
+    //     }
+    //     test();
+    //     var a = 123;
+    //     function test() {
+    //         var b = 123;
+    //     }
+    //     test();
+    //     console.log(window.b);  // 局部变量不归window所有 只有全局变量才可以
+
+    //     window 就是全局变量
+    //     console.log(a); -- > console.log(window.a);
+
+    //     function fn(a) {
+    //         console.log(a);
+    //         var a = 123;
+    //         console.log(a);
+    //         function a() { }
+    //         console.log(a);
+    //         var b = function () { }
+    //         console.log(b);
+    //         function d() { }
+    //     }
+    //     fn(1);
+    //     预编译发生在函数执行之前一刻
+
+    //     function test(a, b) {
+    //         console.log(a);
+    //         c = 0;
+    //         var c;
+    //         a = 3;
+    //         b = 2;
+    //         console.log(b);
+    //         function b() { }
+    //         function d() { }
+    //         console.log(b);
+    //     }
+    //     test(1);
+
+    //     function test() {
+    //         console.log(a); // function a() { }
+    //         console.log(b); // undefined
+    //         var b = 234;
+    //         console.log(b); //234 
+    //         a = 123;
+    //         console.log(a); //123
+    //         function a() { }
+    //         var a;
+    //         b = 234;
+    //         var b = function () { }
+    //         console.log(a); //123
+    //         console.log(b); //function () {}
+    //     }
+    //     test(1);
+    //     GO{
+    //         b: 123
+    //     }
+    //     function test() {
+    //         var a = b = 123;
+    //         console.log(window.b);
+    //     }
+    //     test();
+    //     AO {
+    //         a: undefined
+    //     }
+
+    //     function test(test) {
+    //         console.log(test);
+    //         var test = 234;
+    //         console.log(test);
+    //         function test() { }
+    //     }
+    //     test(1);
+    //     var test = 123;
+
+    //     GO {
+    //         global: 100
+    //     }
+    //     global = 100;
+    //     function fn() {
+    //         console.log(global);
+    //         global = 200;
+    //         console.log(global);
+    //         var global = 300;
+    //     }
+    //     fn();
+    //     var global;
+    //     AO {
+    //         global: undefined;
+    //     }
+
+    // function test() {
+    //     console.log(b);//undefined   error(报错) 
+    //     if (a) {
+    //         var b = 100;
+    //     }
+    //     c = 234;
+    //     console.log(c);//234
     // }
-    function jc(n) {
-        if(n == 1) {
-            return 1;
-        }
-        return n * jc(n - 1);
-    }
+    // var a;
+    // test();
+    // a = 10;
+    // console.log(c); //234 
+
+//    function bar() {
+//         return foo;
+//         foo = 10;
+//         function foo(){
+
+//         }
+//         var foo = 11;
+//    }
+//      console.log(bar());
+
+//     console.log(bar());
+//     function bar() {
+//         foo = 10;
+//         function foo() {
+
+//         }
+//         var foo = 11;
+//         return foo;
+//     }
+
+//    var x = 1;
+//     if (function f(){}){
+//          x += typeof(f);
+//     }
+   
+//     console.log(x);
+
+
+(window.foo || (window.foo = 'bar'));
+
+
+
+
+
+
+
+
 </script>
 
 </html>

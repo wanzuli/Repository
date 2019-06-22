@@ -1,0 +1,51 @@
+  1. 创建AO对象(Activation object) (执行期上下文)
+  2. 找形参和变量声明，将变量和形参名作为AO
+      属性名，值为undefined
+
+  3. 将实参值和形参统一
+  4. 在函数体里找函数声明，值赋予函数体。
+
+
+
+  AO{
+     a : function a() {},
+     b : undefind, 
+     d : fuction d () {},
+  }
+
+1. 生产AO对象
+2. AO{
+     a ：undefind 
+
+     b : undefind
+}
+3. AO{
+     a : 实参值(属性名),
+     b ：undefined
+}
+
+4. AO{ 
+     a ：function a() {}(函数体),
+     b : undefined 
+     d : function a() {}
+}
+  凡是声明都提升上去
+        console.log(a);
+        var a = 123;
+        console.log(a);
+        function a() {}
+        console.log(a);
+        var b = function () {}
+        console.log(b);
+        function d() {}
+
+
+
+
+I  1.生成了一个GO对象 global object
+   2. GO{
+         a : 123,
+   }
+   GO ==== window 
+   任何全局变量 都是window属性(如果你这个变量未经声明就被赋值了，你也归window所有。)
+
