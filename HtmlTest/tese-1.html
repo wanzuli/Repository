@@ -286,20 +286,62 @@
 
     // (window.foo || (window.foo = 'bar'));
 
+    // function a() {
+    //     function b() {
+    //         var b = 234;
+    //     }
+    //     var a = 123;
+    // }
+
+    // [[scope]] 指的就是我们所说的作用域，
+    //           其中存储了运行期上下文的集合。
+    //  作用域链:[[scope]] 中所存储的执行期上下文对象的集合，这个
+    //           集合呈链式链接，我们吧这种链接叫做作用域链。
+    // function a() {
+    //     function b() {
+    //         var b = 234;
+    //         aa = 0;
+    //     }
+    //     var aa = 123;
+    //     b();
+    //     console.log(aa);
+    // }
+    // var glob = 100;
+    // a();
+
     function a() {
-        function b(){
-            var b = 234;
+        function b() {
+            function c() {
+
+            }
+            c();
         }
-        var a = 123;
+        b();
     }
+    a();
+        
+        // 作用域链顺序
+    // a defined a.[[scope]] -- > 0 : GO 
+    // a doing   a.[[scope]] -- > 0 : aAO 
+    //                            1 : GO
+    
+    // b defined b.[[scope]] -- > 0 : aAO 
+    //                            1 : GO
 
-     
+    // b doing   b.[[scope]] -- > 0 : bAO 
+    //                            1 : aAO 
+    //                            2 : GO 
 
+    // c defined c.[[scope]] -- > 0 : bAO 
+    //                            1 : aAO 
+    //                            2 : GO 
 
+    // c doing   c.[[scope]] -- > 0 : cAO 
+    //                            1 : bAO 
+    //                            2 : aAO 
+    //                            3 : GO 
 
-
-
-
+                    
 </script>
 
 </html>
