@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>
+    javascript
+</title>
+
+<head>
+    <script type="text/javascript">
+        // function a() {
+
+        //     function b() {
+        //         var bbb = 234;
+        //         document.write(aaa);
+        //     }
+        //     var aaa = 123;
+        //     return b;
+        // }
+
+        // var glob = 100;
+        // var demo = a();
+        // demo();
+
+        // function a() {
+        //     var num = 100;
+        //     function b() { 
+        //         num ++;
+        //         console.log(num);
+        //     }
+        //     return b;
+
+        // }
+
+        // var demo = a(); 
+        // demo ();
+        // demo ();
+
+        // 闭包 (当内部函数被保存到外部是，将会生成闭包。闭包会导致
+        //       原有的作用域链不释放，造成内存泄露。)
+
+        // 闭包的作用    1. 实现共有变量
+        //                 eg: 函数累加器 
+        //              2. 可以做缓存(存储结构)
+        //                 eg: eater 
+        //              3. 可以实现封装，属性私有化。
+        //                 eg: person();
+        //              4. 模块化开发，防止污染全局变量。  
+
+        // function add() {
+        //     var count = 0;
+        //     function demo() {
+        //         count++;
+        //         console.log(count);
+        //     }
+        //     return demo;
+        // }
+
+        // var counter = add();
+        // counter();
+        // counter();
+        // counter();
+        // counter();
+        // counter();
+
+        // function test() {
+        //     var num = 100; 
+        //     function a() {
+        //         num ++;
+        //         console.log(num);
+        //     }
+        //     function b (){
+        //         num --;
+        //         console.log(num);
+        //     }
+        //     return [a,b];
+        // }
+        // var myArr = test();
+        //     myArr[0]();
+        //     myArr[1]();
+
+        //立即执行函数
+        //针对初始化功能的函数
+
+        var num = (function (a, b, c) {
+
+            var d = a + b + c * 2 - 2;
+            return d;
+        }(1, 2, 3));
+
+        // (function (){}()); W3C 建议这种。
+        // (function (){})(); 
+        //只有表达式才能被执行符号执行
+
+        function test() {
+
+            var arr = [];
+            for (var i = 0; i < 10; i++) {
+                arr[i] = function () {
+                    document.write(i + " ");
+                }
+            }
+            return arr;
+        }
+
+        var myArr = test();
+        for (var j = 0; j < 10; j++) {
+            myArr[j]();
+        }
+
+        // 对象 
+        
+    </script>
+</head>
+
+</html>
