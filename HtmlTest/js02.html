@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>数据类型 </title>
+    <script type="text/javascript">
+
+        /*
+         * 强制类型转换
+         *   - 指将一个数据类型强制转换为其他的数据类型
+         *   - 类型转换主要指，讲其他的数据类型，转换为
+         *     string Number Boolean
+         *
+         */
+
+        /*
+        *   将其他数据类型转换为string
+        *     方式一；
+        *       - 调用被转换数据类型的tostring()方法
+        *       - 该方法不会影响到原变量，它会将转换结果返回
+        *       - 但是注意：null和undefined这两个值没有tostring
+        *           如果调用他们的方法，会报错
+        *  
+        *     方式二；
+        *       - 调用String()函数，变更将被转换的数据作为参数传递给函数
+        *       - 使用String()函数做强制类型转换时，
+        *           对于Number和Biilean实际上就是调用的tostring()方法
+        *           但是对于Null和Undefined，就不会调用tostring()方法
+        *              它会将Null 直接转换为 "Null"
+        *              将Undefined 直接转换为 "Undefined"
+        */
+
+        var a = 123;
+
+        //  调用a的tostring()的方法
+        // 调用xxx的yyy()方法，就是xxx.yyy()
+
+        // a = a.tostring();
+
+        a = null;
+        a = String(a)
+        console.log(typeof a);
+        console.log(a);
+
+        /*
+         *  将其他的数据类型转换为Number
+         *   转换方式一;
+         *      使用Number()函数
+         *        - 字符串-->数字
+         *           1.如果式纯数字的字符串，则直接将其转换为数字
+         *           2.如果字符串中有非数字的内容，则转换为NaN
+         *           3.如果字符串式一个空串或者是一个空格的字符串，则转换为0
+         * 
+         *        - 布尔 --> 数字
+         *            true 转成 1
+         *            false 转成 0
+         *        
+         *        - Null --> 数字 0
+         *        
+         *        - Undefined 转成 NaN
+         * 
+         * 转换方式二: 
+         *      - 这中方式专门用来对付字符串
+         *      - parseInt() 把一个字符串转换成一个整数
+         *      - parseFloat() 把一个字符串转换成一个浮点数
+         */
+
+        var a = 'abc';
+
+        //调用Number()函数来将a转换为Number类型
+        a = Number(a);
+        console.log(typeof a);
+        console.log(a);
+
+        var b = "123px";
+        // 调用parseIne() 函数将a转换为Number
+
+        // parseInt()可以将一个字符串中的有效整数内容取出来
+        //  然后转换为Number
+
+        // parseFloat()作用和parseInt()类似，不同的是他可以获的有效的小鼠
+
+        /* 
+         *  如果对非String使用parseInt()或parseFloat()
+         *  它会先将其转换为string然后在操作
+         */
+
+        b = parseInt(b);
+        console.log(typeof b);
+        console.log(b);
+
+    </script>
+    <script type="text/javascript">
+        var a = 123;
+        /*
+         * 在js中，如果需要表示16进制的数字，则需要以0X开头
+         *         如果需要表示8进制的数字，则需要以0开头
+         *         如果需要表示2进制的数字，则需要一0b开头
+         *            但是不是所有的浏览器都支持
+         */
+
+        //十六进制 0x开头
+        a = 0x10;
+        a = 0xff;
+        a = 0xcafe;
+
+
+        //八进制 
+        a = 070;
+
+        //二进制 
+        // a = 0b10;
+
+        //像“070”这种字符串，有些浏览器会长成8进制解析。有些会当成10进制解析
+        a = "070";
+        //可以在parseInt()中传递一个第二个参数，来指定数字的进制
+        a = parseInt(a, 10);
+        console.log(a);
+        console.log(typeof a);
+
+        /*
+         * 将其他的数据类型转换成boolean
+         *    - 使用Boolean()函数
+         *     - 数字 --> 布尔
+         *        -除了0 和NaN,其它的都是true
+         *       字符串 -->布尔
+         *        - 除了空串，其余的都是true
+         *        - Null和Undefined都会转换为false
+         *        - 对象也会转换为true 
+         */
+
+        var a = 123;//true
+            a = -123;//true
+            a = 0;//false
+            a = Infinity;//true
+            a = NaN;//false
+      //调用Boolean()函数来将a转换为布尔值
+
+            a = Boolean(a);
+              
+         console.log(a);
+         console.log(typeof a);
+        
+            
+
+
+    </script>
+
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>
