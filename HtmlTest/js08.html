@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        原型Prototype
+    </title>
+    <script type="text/javascript">
+
+        /*
+         *   原型Prototype
+         *   我们所创建的每一个函数，解析器都会向函数中添加一个属性，prototype
+         *      这个属性对应着一个对象，这个对象就是我们所谓的原型对象
+         *    如果函数作为普通函数调用prototype没有任何作用
+         *   当函数以构造函数调用时，它所创建的对象中都会有一个隐含的属性
+         *          指向该构造函数的原型对象，我们可以通过__proto__来访问该属性
+         *
+         *    原型对象就相当于一个公共区域，所有同一个类的实例都可以访问到这个原型对象
+         *     我们可以将对象中共有的内容，统一设置到原型对象中
+         *
+         *    当我们访问对象的一个属性或方法时，它会先在对象只身中寻找，如果有则
+         *      直接使用，如果没有则会去原型对象中寻找，如果找则直接使用。
+         *
+         *    以后我们创建构造函数时，可以将这些对象共有的属性和方法，统一添加到
+         *    构造函数的原型对象中，这样不用分别为每一个对象添加，也不会影响到全局
+         *     作用域,就可以使每个对象都具有这些属性和方法了
+         *
+         */
+
+
+        function MyClass() {
+
+        }
+
+        //向MyClass的原型中添加属性a
+        MyClass.prototype.a = 123;
+
+        // 向MyClass的原型中添加一个方法
+        MyClass.prototype.sayHello = function () {
+            alert("hello");
+        }
+
+        var mc = new MyClass();
+        var mc2 = new MyClass();
+
+        // console.log(MyClass.prototype);
+        // console.log(mc2.__proto__ == MyClass.prototype);
+
+        //向mc中添加a属性
+        mc.a = "我是mc中的a";
+
+        // console.log(mc.a);
+        mc.sayHello();
+
+
+        /*
+         *  创建一个构造函数
+         *
+         */
+        function MyClass() {
+
+        }
+
+        // 向MyClass的原型中添加一个name属性
+        MyClass.prototype.name = "我是原型中的名字";
+
+        var mc = new MyClass();
+        mc.age = 18;
+
+        //    console.log(mc.name);
+
+        //使用in检查对象中是否含有某个属性时，如果对象中国美有但是原型中有，
+        //也会返回true
+        // console.log("name" in mc);
+
+        //可以使用对象的hasOwnProperty()来检查对象自身中是否含有该属性
+        //使用该方法只有当对象自身中含有属性时，才会返回true
+        // console.log(mc.hasOwnProperty('age'));
+
+        /*
+         *  原型对象也是对象，所以他也有原型
+         *   当我们使用一个对象的属性活方法时，会先在自身中寻找。
+         *      自身中如果有，则直接使用。
+         *      如果没有则去原型对象中寻找，如果原型对象中有，则使用，
+         *      如果没有则去原型的原型中寻找,知道找到Object对象的原型
+         *      Object对象的原型没有原型，如果在Object中依然没有找到，则返回undefined
+         */
+
+        //console.log(mc.__proto__.__proto__.hasOwnProperty('hasOwnProperty'));
+        // console.log(mc.__proto__.hasOwnProperty('hasOwnProperty'));
+        console.log(mc.__proto__.__proto__.__proto__);
+    </script>
+    <script type="text/javascript">
+
+        /*
+         *  垃圾回收(GC)
+         *    - 就像人生活的时间长了会产生垃圾一样，程序运行过程中也会产生垃圾
+         *       这些垃圾积攒过多以后，会导致程序运行的速度过蛮。
+         *       所以我们需要一个垃圾回收机制，来处理程序运行过程中产生的垃圾
+         *    - 当一个对象没有任何的变量或属性对它进行引用，此时我们将永远无法
+         *      操作该对象，此时这种对象就是一个垃圾。这种对象过多会占用大量的
+         *      内存空间，导致程序运行变慢，所以这种垃圾必须进行清理
+         *    - 在js中拥有自动的垃圾回收机制，会自动将这些垃圾对象从内存中销毁，
+         *       我们不需要也不能进行垃圾回收的操作
+         *    - 我们需要做的只是要将不再使用的对象设置null即可
+         */
+
+        var obj = new Object();
+
+           //  对对象进行各种操作
+               
+         obj = null;
+
+
+       
+
+
+
+
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
