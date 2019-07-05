@@ -1,0 +1,49 @@
+/* *{
+    margin: 0 auto;
+    padding: 0 25px;;
+}
+
+.div{
+    width: 600px;
+    height: 600px;
+    padding: 0px;
+    border: 1px solid black;
+}
+
+#city{
+    margin: 0 10px;
+    float: left;
+    color: rgb(69, 230, 122);
+    font-weight: bold;
+    font-size: 14px;
+    height: 25px ;
+    line-height: 25px;
+    padding: 0 5px;
+}
+#game{
+    margin: 0 10px;
+    float: left;
+    color: rgb(69, 230, 122);
+    font-weight: bold;
+    font-size: 14px;
+    height: 25px ;
+    line-height: 25px;
+    padding: 0 5px;
+}
+#phone{
+    margin: 0 10px;
+    float: left;
+    color: rgb(69, 230, 122);
+    font-weight: bold;
+    font-size: 14px;
+    height: 25px ;
+    line-height: 25px;
+    padding: 0 5px;
+}
+#btnList{
+    margin: 0 auto;
+    width: 500px;
+    height: 800px;
+    padding: 0px;
+    float: left;
+} */

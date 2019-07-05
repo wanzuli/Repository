@@ -13,6 +13,7 @@
 
 <body>
     <button id="btn" onclick="alert('点我干嘛')">我是一个按钮</button>
+    <button id="btn1">点我一下</button>
     <script type="text/javascript">
 
         /*
@@ -34,8 +35,8 @@
          *     比如:点击按钮，鼠标移动，关闭窗口。。。
          */
 
-         //  获取按钮对象
-            var btn = document.getElementById("btn");
+        //  获取按钮对象
+        var btn = document.getElementById("btn");
 
 
         /*
@@ -43,12 +44,52 @@
          *     这样当时间被触发时，其对应的函数将会被调用
          */
 
-         //  绑定一个单击事件
-         //  像这种我单击事件绑定的函数，我们成为单击响应函数
-       btn.ondblclick = function(){
-           alert("你还点~~~");
-       }
- 
+        //  绑定一个单击事件
+        //  像这种我单击事件绑定的函数，我们成为单击响应函数
+        // btn.onmousemove = function () {
+        //     alert("你还点~~~");
+        // }
+        // btn.ondblclick = function () {
+        //     alert("你还点~~~");
+        // }
+
+
+       /*
+        *  浏览器在加载一个页面时，是按照自上而下的顺序加载的
+        *   读取到一行就运行一行,如果将script标签写到页面的上边
+        *   在代码执行时，页面还没有加载,页面没有加载DOM对象也没有
+        *    加载，会导致无法获取到DOM对象
+        */
+      
+       /*
+        * 将js代码编写到页面的下部就是为了，可以在页面加载完毕以后在执行js代码
+        */
+      // 获取id为btn的按钮
+      
+      var btn1 = document.getElementById("btn1")
+
+       btn1.onclick = function(){
+           alert("hello")
+       };
+
+    
+
+     /*
+      * onload 事件会在整个页面加载完成之后才触发
+      *  为window 绑定一个onload事件 
+      *    该事件对应的响应函数将会在页面加载完成之后执行，
+      *    这样可以确保我们的代码执行时所有的DOM对象已经加载完毕了
+      */
+    
+    window.onload = function(){
+        alert("hello")
+    }
+
+
+
+
+
+
     </script>
 </body>
 
