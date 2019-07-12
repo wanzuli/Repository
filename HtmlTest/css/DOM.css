@@ -1,4 +1,4 @@
-/* *{
+ *{
     margin: 0 auto;
     padding: 0 25px;;
 }
@@ -10,7 +10,15 @@
     border: 1px solid black;
 }
 
-#city{
+/* #city{
+    margin: 0 10px;
+    float: left;
+    color: rgb(69, 230, 122);
+    font-weight: bold;
+    font-size: 14px;
+   
+} */
+/* #game{
     margin: 0 10px;
     float: left;
     color: rgb(69, 230, 122);
@@ -19,8 +27,8 @@
     height: 25px ;
     line-height: 25px;
     padding: 0 5px;
-}
-#game{
+} */
+/* #phone{
     margin: 0 10px;
     float: left;
     color: rgb(69, 230, 122);
@@ -29,21 +37,11 @@
     height: 25px ;
     line-height: 25px;
     padding: 0 5px;
-}
-#phone{
-    margin: 0 10px;
-    float: left;
-    color: rgb(69, 230, 122);
-    font-weight: bold;
-    font-size: 14px;
-    height: 25px ;
-    line-height: 25px;
-    padding: 0 5px;
-}
-#btnList{
+} */
+/* #btnList{
     margin: 0 auto;
     width: 500px;
     height: 800px;
     padding: 0px;
     float: left;
-} */
+}  */
